@@ -182,7 +182,17 @@
             color: #ddd;
         }
 
-        /* Responsive Design */
+        #view-menu-button {
+            background-color: #ff6600;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
         @media (max-width: 768px) {
             header nav {
                 display: none;
@@ -236,7 +246,7 @@
 <body>
     <header>
         <div class="container">
-            <div class="logo">Dancing Okra</div>
+            <div class="logo">The Dancing Okra</div>
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -267,9 +277,8 @@
     <main>
         <section id="home">
             <div class="container">
-                <h2>Welcome to Dancing Okra</h2>
-                <p>Where every bite has a beat</p>
-                <a href="#menu"><button>View the Menu</button></a>
+                <h2>Where every bite has a beat</h2>
+                <a href="#menu"><button id="view-menu-button">View the Menu</button></a>
             </div>
         </section>
         <section id="about">
@@ -314,6 +323,7 @@
                         <h3>Gobi Manchurian</h3>
                         <p>Crispy cauliflower coated in a sweet and tangy sauce</p>
                         <p>$20</p>
+                        <button>Order Now</button>
                     </div>
                     <div class="grid-item">
                         <h3>Saag Paneer</h3>
