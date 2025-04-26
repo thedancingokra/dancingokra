@@ -204,6 +204,29 @@
                  <button onclick="window.location.href='#reservations'">View Full Menu</button>
             </div>
         </section>
+         <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+
+        function toggleMobileMenu() {
+            mobileMenu.style.display = mobileMenu.style.display === 'none' || mobileMenu.style.display === '' ? 'block' : 'none';
+        }
+
+        mobileMenuButton.addEventListener('click', toggleMobileMenu);
+        mobileMenuClose.addEventListener('click', toggleMobileMenu);
+
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', toggleMobileMenu);
+        });
+
+         document.addEventListener('click', (event) => {
+            if (mobileMenu.style.display === 'block' && !mobileMenu.contains(event.target) && event.target !== mobileMenuButton) {
+                toggleMobileMenu();
+            }
+        });
+    </script>
 
         <section id="reviews">
             <div class="container">
