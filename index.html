@@ -3,132 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dancing Okra</title>
-    <link href="https://fonts.googleapis.com/css?family=Lora" href="styles.css">
-    <script sec="hhtps://unpkg.com/@tailwindcss/browser@latest"></script>
-</head>
-<style>
-     body {
-        font-family: 'Lora', serif;
-        background-color: #f8f8f8;
-        color: #333;
-        margin: 0;
-        padding: 0;
-    }
-    header, footer, section {
-        margin-bottom: 60 px;
-    }
-    .container {
-        max-width: 1200 px;
-        margin: 0 auto;
-        padding: 0 20 px;
-    }
-    header {
-        background-color: #455823;
-        color: white;
-        text-align: center;
-        padding: 20 px 0;
-        border-bottom: 2 px solid #ccc;
-    }
-    header .logo {
-        font-size: 24 px;
-        font-weight: bold;
-        margin-bottom: 10 px;
-    }
-    header nav ul {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        padding: 0;
-        margin: 0;
-    }
-    header nav ul li {
-        margin: 0 15 px;
-    }
-    header nav ul li a {
-        text-decoration: none;
-        color: white;
-        font-weight: bold;
-    }
-    section {
-        padding: 30 px 0;
-        text-align: center;
-        border-bottom: 1 px solid #eee;
-    }
-    section h2 {
-        font-size: 32 px;
-        font-weight: bold;
-        margin-bottom: 20 px;
-    }
-    section p {
-        font-size: 18 px;
-        line-height: 1.7;
-        margin-bottom: 20 px;
-    }
-    .grid{
-        display: grid;
-        grid-template-columns: repeat (auto-fit, minmax (250 px, 1 fr));
-        gap: 20 px;
-        margin-top: 30 px;
-    }
-    .grid-item {
-        background-color: #ffffff;
-        padding: 20 px;
-        border-radius: 10 px;
-        box-shadow: 0 2 px 5 px rgba (0, 0, 0, 0.1);
-        text-align: center;
-    }
-    .grid-item h3 {
-        font-size: 24 px;
-        margin-bottom: 12 px;
-        color: #333333;
-    }
-    .grid-item p {
-        font-size: 16 px;
-        color: #555;
-        line-height: 1.6;
-        margin-bottom: 1.5 px;
-    }
-    .grid-item button{
-        padding: 12 px 25 px;
+    <title>Restaurant Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f8f8f8;
+        }
+        header, footer, section {
+            margin-bottom: 60px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background-color: #f0f0f0;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 2px solid #ccc;
+        }
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+        header nav ul li {
+            margin: 0 15px;
+        }
+        header nav ul li a {
+            text-decoration: none;
+            color: #555;
+            font-weight: bold;
+        }
+        section {
+            padding: 30px 0;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+        section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #444;
+        }
+        section p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .grid-item {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .grid-item h3 {
+            font-size: 24px;
+            margin-bottom: 12px;
+            color: #333;
+        }
+        .grid-item p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .grid-item button {
+            padding: 12px 25px;
             background-color: #ff6600;
             color: white;
             border: none;
-            border-radius: 10 px;
-            font-size: 18 px;
+            border-radius: 10px;
+            font-size: 18px;
             cursor: pointer;
-            transition: background-color 0.3 s ease;
-            margin-top: 10 px;
-    }
-    .grid-item button:hover {
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+        .grid-item button:hover {
             background-color: #cc5200;
-    }
-    main {
-        padding: 20 px;
-    }
-    footer {
-        text-align: center;
-        padding: 10 px 0;
-        background-color: #333;
-        color: white;
-    }
-    footer p {
-        font-size: 16 px;
-        color: #555;
-    }
-</style>
+        }
+        footer {
+            background-color: #f0f0f0;
+            padding: 25px 0;
+            text-align: center;
+            margin-top: 60px;
+            border-top: 2px solid #ccc;
+        }
+        footer p {
+            font-size: 16px;
+            color: #555;
+        }
+        /* Mobile menu styles */
+        .mobile-menu-button {
+            display: none;
+            background-color: #ff6600;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        #mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 10;
+        }
+        #mobile-menu-content {
+            background-color: #fff;
+            width: 80%;
+            max-width: 320px;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        #mobile-menu-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            color: #555;
+            cursor: pointer;
+            border: none;
+            background: none;
+            padding: 5px;
+        }
+        #mobile-menu-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        #mobile-menu-content ul li {
+            margin-bottom: 20px;
+        }
+        #mobile-menu-content ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 20px;
+            font-weight: bold;
+            display: block;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        #mobile-menu-content ul li a:hover {
+            color: #ff6600;
+        }
+        /* Media query for mobile menu button */
+        @media (max-width: 768px) {
+            header nav {
+                display: none;
+            }
+            .mobile-menu-button {
+                display: block;
+            }
+        }
+    </style>
+</head>
 <body>
     <header>
-        <div class = "container">
-            <div class = "logo">Dancing Okra</div>
+        <div class="container">
+            <div class="logo">Gourmet Haven</div>
             <nav>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#reviews">Reviews</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                    <li><a href="#revervations">Revervations</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="reservations.html">Reservations</a></li>
                 </ul>
             </nav>
             <button id="mobile-menu-button" class="mobile-menu-button">Menu</button>
@@ -136,107 +205,127 @@
     </header>
 
     <div id="mobile-menu">
-        <div id = "mobile-menu-content">
-            <button id="mobile-menu-close" class="mobile-menu-close">X</button>
+        <div id="mobile-menu-content">
+            <button id="mobile-menu-close">✕</button>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#reviews">Reviews</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-                <li><a href="#revervations">Revervations</a></li>
+                 <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
             </ul>
         </div>
-    </div> 
+    </div>
+
     <main>
         <section id="home">
             <div class="container">
-                <h2>Welcome to Dancing Okra</h2>
-                <p>Where every bite has a beat</p>
-                <a href="menu.html"><button>View the Menu</button></a>
+                <h2>Welcome to Gourmet Haven</h2>
+                <p>A culinary journey where exquisite flavors meet elegant ambiance.</p>
+                <a href="menu.html"><button>View Our Menu</button></a>
             </div>
         </section>
 
-        <section id = "menu">
+        <section id="special-offer">
+            <div class="container">
+                <h2>Special Offer This Weekend</h2>
+                <p>Indulge in our exclusive Chef's Tasting Menu...</p>
+                <a href="reservations.html"><button>Reserve Now</button></a>
+            </div>
+        </section>
+
+        <section id="menu">
             <div class="container">
                 <h2>Our Menu</h2>
                 <div class="grid">
                     <div class="grid-item">
-                        <h3>Red Lentil Curry</h3>
-                        <p>Red lentils simmered in a fragrant and spicy onion tomato curry base</p>
-                        <p>$22</p>
+                        <h3>Seared Scallops</h3>
+                        <p>Pan-seared Georges Bank scallops...</p>
+                        <p>$28</p>
                     </div>
                     <div class="grid-item">
-                        <h3>Saag Paneer</h3>
-                        <p>Flavor packed dish with Indian cheese served in a creamy curry with leafy greens</p>
-                        <p>$22</p>
+                        <h3>Braised Short Ribs</h3>
+                        <p>Slow-braised Angus beef short ribs...</p>
+                        <p>$32</p>
                     </div>
                     <div class="grid-item">
-                        <h3>Gobi Manchurian</h3>
-                        <p>Crispy cauliflower coated in a sweet and tangy sauce</p>
-                        <p>$20</p>
+                        <h3>Lobster Ravioli</h3>
+                        <p>Homemade ravioli filled with fresh Maine lobster...</p>
+                        <p>$35</p>
                     </div>
                      <div class="grid-item">
-                        <h3>Bombay Potatoes</h3>
-                        <p>Indian style spiced potatoes, cooked with plenty of spices, onions, tomatoes and curry leaves</p>
-                        <p>$19</p>
-                    </div>
-                    <div class="grid-item">
-                        <h3>Dal Soup</h3>
-                        <p>Soul nourishing soup with lemon juice and rich lentils and veggies </p>
-                        <p>$19</p>
-                    </div>
-                    <div class="grid-item">
-                        <h3>Bhindhi Masala</h3>
-                        <p>Classic stir fry made of okra, onions, and tomatoes along with bold flavors and rich spicies </p>
+                        <h3>Pan-Seared Duck Breast</h3>
+                        <p>Crispy pan-seared duck breast...</p>
                         <p>$30</p>
                     </div>
                     <div class="grid-item">
-                        <h3>Biryani Rice</h3>
-                        <p>Basmati rice enfused with spices, herbs, yogurt and onions </p>
-                        <p>$17</p>
+                        <h3>Grilled Swordfish</h3>
+                        <p>Freshly grilled swordfish steak...</p>
+                        <p>$29</p>
                     </div>
                     <div class="grid-item">
-                        <h3>Paneer Tikka Masala</h3>
-                        <p>Mouth watering chargrilled paneer with flavorful spicy gravy</p>
-                        <p>$15</p>
+                        <h3>Chocolate Lava Cake</h3>
+                        <p>Warm, decadent chocolate lava cake...</p>
+                        <p>$12</p>
                     </div>
                 </div>
-                 <button onclick="window.location.href='#reservations'">View Full Menu</button>
+                <a href="menu.html"><button>View Full Menu</button></a>
             </div>
         </section>
-        
+
+        <section id="about">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>Chef Jean-Pierre brings over 25 years of culinary experience...</p>
+            </div>
+        </section>
+
         <section id="reviews">
             <div class="container">
                 <h2>What Our Customers Say</h2>
                 <div class="grid">
                     <div class="grid-item">
-                        <h3>Raja Gomez</h3>
-                        <p>"Abosolutely incredible experience! Dancing Okra delivers on every level from the live Bollywood music which had everyone tapping their feet to the signature Okra Curry which was out of this world. The spices were rich and the okra was perfectly cooked, and the ambiance felt so warm and welcoming. I can't wait to come back!"</p>
+                        <h3>Sarah M.</h3>
+                        <p>"Gourmet Haven exceeded all of my expectations!..."</p>
                     </div>
                     <div class="grid-item">
-                        <h3>Analise Godovan</h3>
-                        <p>"Enchanting atmosphere with Bollywood tunes and cozy decor. The food was perfectly seasoned and cooked, the staff was super friendly and make us feel right at home!"</p>
+                        <h3>David K.</h3>
+                        <p>"The ambiance is perfect for a special occasion..."</p>
                     </div>
                     <div class="grid-item">
-                        <h3>Aniska Madhavan</h3>
-                        <p>"The live music nights are so fun! Every bite of the food felt like a jounrey through the flavours of India. Loved the attention to detail with the decor and lighting"</p>
+                        <h3>Jessica L.</h3>
+                        <p>"From the moment we walked in, we were treated like royalty..."</p>
                     </div>
+                </div>
             </div>
         </section>
+
         <section id="contact">
             <div class="container">
                 <h2>Contact Us</h2>
-                <p>42075 Ladyfinger Lane, Manchuria, VA, USA 70342</p>
-                <p>thedancingokra@gmail.com</p>
-                <p>Store Hours: 11:00 AM - 11:00 PM</p>
+                <p>123 Main Street, Anytown, USA 12345</p>
+                <p>+1 (555) 123-4567</p>
+                <p>info@gourmethaven.com</p>
+                <p>Open Daily: 11:00 AM - 10:00 PM</p>
+                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d317718.69143878766!2d-0.24199326574292235!3d51.52877184345387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00bafed9561%3A0x1423b927b792b6a2!2sLondon%2C%20UK!5e0!3m2!1sen!2sus!4v1708512718929!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-lg shadow-lg"></iframe>
+            </div>
+        </section>
+         <section id="reservations">
+            <div class="container">
+                <h2>Reservations</h2>
+                <p>Make a reservation for an unforgettable dining experience.</p>
+                <a href="reservations.html"><button>Make a Reservation</button></a>
             </div>
         </section>
     </main>
+
     <footer>
-        <p>&copy; The Dancing Okra. All rights reserved.</p>
+        <div class="container">
+            <p>© 2024 Gourmet Haven. All rights reserved.</p>
+        </div>
     </footer>
-</body>
+
     <script>
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -260,4 +349,5 @@
             }
         });
     </script>
+</body>
 </html>
