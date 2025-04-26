@@ -11,53 +11,114 @@
 </style>
 <body>
     <header>
-        <h1>Welcome to My Website</h1>
+        <div class = "container">
+            <div class = "logo">Dancing Okra</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#revervations">Revervations</a></li>
+                </ul>
+            </nav>
+            <button id="mobile-menu-button" class="mobile-menu-button">Menu</button>
+        </div>
     </header>
+
+    <div id="mobile-menu">
+        <div id = "mobile-menu-content">
+            <button id="mobile-menu-close" class="mobile-menu-close">X</button>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#revervations">Revervations</a></li>
+            </ul>
+        </div>
+    </div> 
     <main>
-        <p>Content goes here.</p>
+        <section id="home">
+            <div class="container">
+                <h2>Welcome to Dancing Okra</h2>
+                <p>Where every bite has a beat</p>
+                <a href="menu.html"><button>View the Menu</button></a>
+            </div>
+        </section>
+
+        <section id = "menu">
+            <div class="container">
+                <h2>Our Menu</h2>
+                <div class="grid">
+                    <div class="grid-item">
+                        <h3>Red Lentil Curry</h3>
+                        <p>Red lentils simmered in a fragrant and spicy onion tomato curry base</p>
+                        <p>$22</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Saag Paneer</h3>
+                        <p>Flavor packed dish with Indian cheese served in a creamy curry with leafy greens</p>
+                        <p>$22</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Gobi Manchurian</h3>
+                        <p>Crispy cauliflower coated in a sweet and tangy sauce</p>
+                        <p>$20</p>
+                    </div>
+                     <div class="grid-item">
+                        <h3>Bombay Potatoes</h3>
+                        <p>Indian style spiced potatoes, cooked with plenty of spices, onions, tomatoes and curry leaves</p>
+                        <p>$19</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Dal Soup</h3>
+                        <p>Soul nourishing soup with lemon juice and rich lentils and veggies </p>
+                        <p>$19</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Bhindhi Masala</h3>
+                        <p>Classic stir fry made of okra, onions, and tomatoes along with bold flavors and rich spicies </p>
+                        <p>$30</p>
+                    </div>
+                </div>
+                 <button onclick="window.location.href='#reservations'">View Full Menu</button>
+            </div>
+        </section>
+
+        <section id="reviews">
+            <div class="container">
+                <h2>What Our Customers Say</h2>
+                <div class="grid">
+                    <div class="grid-item">
+                        <h3>Raja Gomez</h3>
+                        <p>"Abosolutely incredible experience! Dancing Okra delivers on every level from the live Bollywood music which had everyone tapping their feet to the signature Okra Curry which was out of this world. The spices were rich and the okra was perfectly cooked, and the ambiance felt so warm and welcoming. I can't wait to come back!"</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Analise Godovan</h3>
+                        <p>"Enchanting atmosphere with Bollywood tunes and cozy decor. The food was perfectly seasoned and cooked, the staff was super friendly and make us feel right at home!"</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Aniska Madhavan</h3>
+                        <p>"The live music nights are so fun! Every bite of the food felt like a jounrey through the flavours of India. Loved the attention to detail with the decor and lighting"</p>
+                    </div>
+                <p>"The best food I've ever had!" - Raja Gomez</p>
+                <p>"A delightful experience!" - Jane Smith</p>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>42075 Ladyfinger Lane, Manchuria, VA, USA 70342</p>
+                <p>thedancingokra@gmail.com</p>
+                <p>Store Hours: 11:00 AM - 11:00 PM</p>
+            </div>
+        </section>
     </main>
     <footer>
-        <p>&copy; 2025 Your Name. All rights reserved.</p>
-    </footer>
-
-    
-    <section id = "menu">
-        <div class="container">
-            <h2>Our Menu</h2>
-            <div class="grid">
-                <div class="grid-item">
-                    <h3>Red Lentil Curry</h3>
-                    <p>Red lentils simmered in a fragrant and spicy onion tomato curry base</p>
-                    <p>$22</p>
-                </div>
-                <div class="grid-item">
-                    <h3>Saag Paneer</h3>
-                    <p>Flavor packed dish with Indian cheese served in a creamy curry with leafy greens</p>
-                    <p>$22</p>
-                </div>
-                <div class="grid-item">
-                    <h3>Gobi Manchurian</h3>
-                    <p>Crispy cauliflower coated in a sweet and tangy sauce</p>
-                    <p>$20</p>
-                </div>
-                 <div class="grid-item">
-                    <h3>Bombay Potatoes</h3>
-                    <p>Indian style spiced potatoes, cooked with plenty of spices, onions, tomatoes and curry leaves</p>
-                    <p>$19</p>
-                </div>
-                <div class="grid-item">
-                    <h3>Dal Soup</h3>
-                    <p>Soul nourishing soup with lemon juice and rich lentils and veggies </p>
-                    <p>$19</p>
-                </div>
-                <div class="grid-item">
-                    <h3>Bhindhi Masala</h3>
-                    <p>Classic stir fry made of okra, onions, and tomatoes along with bold flavors and rich spicies </p>
-                    <p>$30</p>
-                </div>
-            </div>
-             <button onclick="window.location.href='#reservations'">View Full Menu</button>
-        </div>
-    </section>
+        <p>&copy; The Dancing Okra. All rights reserved.</p>
+    </footer>>
 </body>
 </html>
