@@ -7,7 +7,114 @@
     <link href="https://fonts.googleapis.com/css?family=Lora" href="styles.css">
 </head>
 <style>
-    
+     body {
+        font-family: 'Lora', serif;
+        background-color: #f8f8f8;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+    header, footer, section {
+        margin-bottom: 60 px;
+    }
+    .container {
+        max-width: 1200 px;
+        margin: 0 auto;
+        padding: 0 20 px;
+    }
+    header {
+        background-color: #455823;
+        color: white;
+        text-align: center;
+        padding: 20 px 0;
+        border-bottom: 2 px solid #ccc;
+    }
+    header .logo {
+        font-size: 24 px;
+        font-weight: bold;
+        margin-bottom: 10 px;
+    }
+    header nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+    header nav ul li {
+        margin: 0 15 px;
+    }
+    header nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+    section {
+        padding: 30 px 0;
+        text-align: center;
+        border-bottom: 1 px solid #eee;
+    }
+    section h2 {
+        font-size: 32 px;
+        font-weight: bold;
+        margin-bottom: 20 px;
+    }
+    section p {
+        font-size: 18 px;
+        line-height: 1.7;
+        margin-bottom: 20 px;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: repeat (auto-fit, minmax (250 px, 1 fr));
+        gap: 20 px;
+        margin-top: 30 px;
+    }
+    .grid-item {
+        background-color: #ffffff;
+        padding: 20 px;
+        border-radius: 10 px;
+        box-shadow: 0 2 px 5 px rgba (0, 0, 0, 0.1);
+        text-align: center;
+    }
+    .grid-item h3 {
+        font-size: 24 px;
+        margin-bottom: 12 px;
+        color: #333333;
+    }
+    .grid-item p {
+        font-size: 16 px;
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 1.5 px;
+    }
+    .grid-item button{
+        padding: 12 px 25 px;
+            background-color: #ff6600;
+            color: white;
+            border: none;
+            border-radius: 10 px;
+            font-size: 18 px;
+            cursor: pointer;
+            transition: background-color 0.3 s ease;
+            margin-top: 10 px;
+    }
+    .grid-item button:hover {
+            background-color: #cc5200;
+    }
+    main {
+        padding: 20 px;
+    }
+    footer {
+        text-align: center;
+        padding: 10 px 0;
+        background-color: #333;
+        color: white;
+    }
+    footer p {
+        font-size: 16 px;
+        color: #555;
+    }
 </style>
 <body>
     <header>
