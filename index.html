@@ -1,210 +1,550 @@
 <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Dancing Okra - Authentic Indian Cuisine</title>
-            <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-            <link rel="stylesheet" href="style.css">
-        </head>
-        <body>
-            <header class="bg-green-100 py-4">
-                <div class="container mx-auto flex items-center justify-center">
-                    <img src="dancing_okra_logo.png" alt="Dancing Okra Logo" class="h-16 mr-4">
-                    <h1 class="text-3xl font-bold text-green-800">Dancing Okra</h1>
-                    <button id="mobile-menu-button" class="text-green-600 focus:outline-none lg:hidden">
-                        ☰
-                    </button>
-                </div>
-                <div class="hidden lg:flex justify-center mt-4">
-                    <nav>
-                        <ul class="flex space-x-8">
-                            <li><a href="#about" class="text-green-600 hover:text-green-800">About</a></li>
-                            <li><a href="#menu" class="text-green-600 hover:text-green-800">Menu</a></li>
-                            <li><a href="#reviews" class="text-green-600 hover:text-green-800">Reviews</a></li>
-                            <li><a href="#contact" class="text-green-600 hover:text-green-800">Contact</a></li>
-                            <li><a href="#reservations" class="text-green-600 hover:text-green-800">Reservations</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div id="mobile-menu" class="lg:hidden fixed top-0 left-0 w-full h-full bg-green-100 z-50" style="display: none;">
-                    <button id="mobile-menu-close" class="absolute top-4 right-4 text-green-600 text-2xl">
-                        &times;
-                    </button>
-                    <nav class="flex flex-col items-center justify-center h-full">
-                        <ul class="text-center">
-                            <li class="mb-4"><a href="#about" class="text-green-600 hover:text-green-800 text-lg">About</a></li>
-                            <li class="mb-4"><a href="#menu" class="text-green-600 hover:text-green-800 text-lg">Menu</a></li>
-                            <li class="mb-4"><a href="#reviews" class="text-green-600 hover:text-green-800 text-lg">Reviews</a></li>
-                            <li class="mb-4"><a href="#contact" class="text-green-600 hover:text-green-800 text-lg">Contact</a></li>
-                            <li class="mb-4"><a href="#reservations" class="text-green-600 hover:text-green-800 text-lg">Reservations</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </header>
-            <main>
-                <section id="about" class="container mx-auto mt-12 px-4">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div>
-                            <h2 class="text-2xl font-bold text-green-800 mb-4">About Us</h2>
-                            <p class="text-gray-700 leading-relaxed">
-                                Welcome to Dancing Okra, where we celebrate the vibrant flavors of India with a modern twist. Our restaurant is more than just a place to eat; it's an experience that tantalizes your senses with authentic spices, aromatic herbs, and the soulful rhythm of Bollywood music.
-                            </p>
-                            <p class="text-gray-700 leading-relaxed mt-4">
-                                Founded in 2025 in the heart of Manchuria, Virginia, Dancing Okra is the culmination of a lifelong passion for Indian cuisine. Our chefs bring decades of experience, blending traditional recipes with innovative techniques to create dishes that are both familiar and surprising.
-                            </p>
-                            <p class="text-gray-700 leading-relaxed mt-4">
-                                We are committed to using the freshest ingredients, sourced locally whenever possible, to ensure every dish bursts with flavor. Our menu features a wide array of vegetarian and non-vegetarian options, from classic curries and tandoori specialties to unique creations you won't find anywhere else.
-                            </p>
-                        </div>
-                        <div>
-                             <img src="restaurant_interior.jpg" alt="Restaurant Interior" class="rounded-lg shadow-md">
-                        </div>
-                    </div>
-                </section>
-                <section id="menu">
-                    <div class="container">
-                        <h2>Our Delicious Menu</h2>
-                        <p>Explore our diverse menu featuring a range of flavorful Indian dishes, from classic curries to tandoori specialties and delightful vegetarian options. Each dish is prepared with passion and authentic spices to tantalize your taste buds.</p>
-                        <div class="grid">
-                            <div class="grid-item">
-                                <h3>Okra Curry Special</h3>
-                                <p>Our signature dish! Tender okra cooked in a rich and aromatic blend of spices.</p>
-                                <p>$30</p>
-                                <button>Order Now</button>
-                            </div>
-                            <div class="grid-item">
-                                <h3>Paneer Tikka Masala</h3>
-                                <p>Mouth watering chargrilled paneer with flavorful spicy gravy.</p>
-                                <p>$18</p>
-                                <button>Order Now</button>
-                            </div>
-                            <div class="grid-item">
-                                <h3>Vegetable Biryani</h3>
-                                <p>Fragrant basmati rice cooked with mixed vegetables, herbs, and spices.</p>
-                                <p>$19</p>
-                                <button>Order Now</button>
-                            </div>
-                            <div class="grid-item">
-                                <h3>Dal Soup</h3>
-                                <p>Soul nourishing soup with lemon juice and rich lentils and veggies </p>
-                                <p>$15</p>
-                                <button>Order Now</button>
-                            </div>
-                            <div class="grid-item">
-                                <h3>Red Lentil Curry</h3>
-                                <p>Red lentils simmered in a fragrant and spicy onion tomato curry base</p>
-                                <p>$22</p>
-                                <button>Order Now</button>
-                            </div>
-                            <div class="grid-item">
-                                <h3>Gobi Manchurian</h3>
-                                <p>Crispy cauliflower coated in a sweet and tangy sauce</p>
-                                <p>$20</p>
-                                <button>Order Now</button>
-                            </div>
-                            <div class="grid-item">
-                                <h3>Saag Paneer</h3>
-                                <p>Creamy spinach and homemade Indian cheese cooked with mild spices.</p>
-                                <p>$17</p>
-                                <button>Order Now</button>
-                            </div>
-                            <div class="grid-item">
-                                <h3>Garlic Naan</h3>
-                                <p>Soft and fluffy Indian bread topped with fresh garlic and cilantro.</p>
-                                <p>$15</p>
-                                <button>Order Now</button>
-                            </div>
-                        </div>
-                        <a href="#menu"><button id="view-menu-button">View the Full Menu</button></a>
-                    </div>
-                </section>
-                <section id="reviews">
-                    <div class="container">
-                        <h2>What Our Customers Say</h2>
-                        <div class="grid">
-                            <div class="grid-item">
-                                <h3>Raja Gomez</h3>
-                                <p>"Absolutely incredible experience! Dancing Okra delivers on every level from the live Bollywood music which had everyone tapping their feet to the signature Okra Curry which was out of this world. The spices were rich and the okra was perfectly cooked, and the ambiance felt so warm and welcoming. I can't wait to come back!"</p>
-                            </div>
-                            <div class="grid-item">
-                                <h3>Analise Godovan</h3>
-                                <p>"Enchanting atmosphere with Bollywood tunes and cozy decor. The food was perfectly seasoned and cooked, the staff was super friendly and made us feel right at home!"</p>
-                            </div>
-                            <div class="grid-item">
-                                <h3>Aniska Madhavan</h3>
-                                <p>"The live music nights are so fun! Every bite of the food felt like a journey through the flavors of India. Loved the attention to detail with the decor and lighting."</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section id="contact">
-                    <div class="container">
-                        <h2>Contact Us</h2>
-                        <p>Visit Us At: 42075 Ladyfinger Lane, Manchuria, VA, USA 70342</p>
-                        <p>Email: thedancingokra@gmail.com</p>
-                        <p>Instagram @dancingokra.veg</p>
-                        <p>Store Hours: 11:00 AM - 11:00 PM Daily</p>
-                    </div>
-                </section>
-                <section id="reservations">
-                    <div class="container">
-                        <h2>Make a Reservation</h2>
-                        <p>Book your table in advance to ensure you get the best spot, especially on our live music nights!</p>
-                        <form class="mt-8">
-                            <div class="mb-4">
-                                <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name:</label>
-                                <input type="text" id="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Name">
-                            </div>
-                            <div class="mb-4">
-                                <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
-                                <input type="email" id="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Email">
-                            </div>
-                            <div class="mb-4">
-                                <label for="phone" class="block text-gray-700 text-sm font-bold mb-2">Phone:</label>
-                                <input type="tel" id="phone" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Phone Number">
-                            </div>
-                            <div class="mb-4">
-                                <label for="date" class="block text-gray-700 text-sm font-bold mb-2">Date:</label>
-                                <input type="date" id="date" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                            </div>
-                            <div class="mb-4">
-                                <label for="time" class="block text-gray-700 text-sm font-bold mb-2">Time:</label>
-                                <input type="time" id="time" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                            </div>
-                            <div class="mb-4">
-                                <label for="guests" class="block text-gray-700 text-sm font-bold mb-2">Number of Guests:</label>
-                                <select id="guests" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5+</option>
-                                </select>
-                            </div>
-                            <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Request Reservation</button>
-                        </form>
-                    </div>
-                </section>
-            </main>
-            <footer>
-                <div class="container">
-                    <p>&copy; 2025 Dancing Okra. All rights reserved.</p>
-                    <p>Designed with love in South Riding, Virginia.</p>
-                </div>
-            </footer>
-            <script>
-                const mobileMenuButton = document.getElementById('mobile-menu-button');
-                const mobileMenu = document.getElementById('mobile-menu');
-                const mobileMenuClose = document.getElementById('mobile-menu-close');
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dancing Okra</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Lora', serif;
+            background-color: #FFF4E1;
+            color: #7B5E57;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .container h1 {
+            font-size: 70px;
+        }
+        header, footer, section {
+            margin-bottom: 70px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+        header {
+            background-color: #243119; /* Soft Coral Red */
+            color: white;
+            text-align: center;
+            padding: 30px 0; /* Increased vertical padding */
+            border-bottom: 3px solid #FFCC9C; /* Thicker border */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+            display: flex; /* Added for layout */
+            align-items: center; /* Vertically center items */
+            justify-content: space-between; /* Space out items */
+        }
+        header .logo {
+            font-size: 2.75rem; /* Slightly larger logo */
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 30px 0;
+            margin: 0;
+        }
+        header nav ul li {
+            margin: 0 20px; /* Increased horizontal margin */
+        }
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bolder;
+            transition: color 0.3s ease;
+            font-size: 28px; /* Slightly larger navigation links */
+        }
+        header nav ul li a:hover {
+            color: #FFE28A; /* Pastel Marigold */
+        }
+        section {
+            padding: 40px; /* Increased vertical padding */
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0; /* Slightly darker divider */
+        }
+        section:last-child {
+            border-bottom: none; /* Remove border from the last section */
+        }
+        section h2 {
+            font-size: 3rem; /* Larger section titles */
+            font-weight: bold;
+            margin-bottom: 25px;
+            color: #243119; /* Soft Coral Red */
+        }
+        section p {
+            font-size: 1.15rem; /* Slightly larger paragraph text */
+            line-height: 1.8; /* Improved line height for readability */
+            margin-bottom: 30px;
+            color: #7B5E57; /* Light Cocoa Brown */
+            max-width: 800px; /* Limit paragraph width for better readability */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Slightly wider minimum width */
+            gap: 25px; /* Increased gap */
+            margin-top: 40px;
+        }
+        .grid-item {
+            background-color: white; /* Keeping the cards white for contrast */
+            padding: 35px; /* Increased padding */
+            border-radius: 12px; /* More rounded corners */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08); /* More pronounced shadow */
+            text-align: center;
+            transition: transform 0.2s ease-in-out; /* Subtle hover effect */
+        }
+        .grid-item:hover {
+            transform: translateY(-5px);
+        }
+        .grid-item h3 {
+            font-size: 1.75rem; /* Larger heading within grid items */
+            margin-bottom: 18px;
+            color: #FFCC9C; /* Pastel Peach */
+        }
+        .grid-item p {
+            font-size: 1.05rem;
+            color: #7B5E57; /* Light Cocoa Brown */
+            line-height: 1.7;
+            margin-bottom: 1.25rem;
+        }
+        .grid-item button {
+            padding: 14px 30px; /* Slightly larger button */
+            background-color: #F5B971; /* Saffron Blush */
+            color: white;
+            border: none;
+            border-radius: 10px; /* More rounded button */
+            font-size: 1.15rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease-in-out; /* Hover effects */
+            margin-top: 20px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+        }
+        .grid-item button:hover {
+            background-color: #e0a55d; /* A slightly darker shade of Saffron Blush */
+            transform: scale(1.05);
+        }
+        main {
+            
+        }
+        footer {
+            text-align: center;
+            padding: 30px 0; /* Increased footer padding */
+            background-color: #7B5E57; /* Light Cocoa Brown */
+            color: #FFF4E1; /* Vanilla Cream */
+            font-size: 1rem;
+        }
+        footer p {
+            color: #FFE28A; /* Pastel Marigold */
+            margin: 8px 0;
+        }
+        /* Mobile Menu Styles */
+        .mobile-menu-button {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.3rem; /* Slightly larger mobile menu button */
+            cursor: pointer;
+            padding: 12px 20px;
+            font-weight: bold;
+        }
+        #mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9); /* Slightly darker background */
+            z-index: 10;
+            align-items: center;
+            justify-content: center;
+        }
+        #mobile-menu-content {
+            background-color: #243119; /* Soft Coral Red */
+            padding: 40px; /* Increased padding */
+            border-radius: 12px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        #mobile-menu-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: #FFF4E1; /* Vanilla Cream */
+            font-size: 1.75rem; /* Larger close button */
+            cursor: pointer;
+            opacity: 0.8;
+            transition: opacity 0.2s ease-in-out;
+        }
+        #mobile-menu-close:hover {
+            opacity: 1;
+        }
+        #mobile-menu-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #mobile-menu-content ul li {
+            margin-bottom: 25px; /* Increased spacing in mobile menu */
+        }
+        #mobile-menu-content ul li a {
+            color: #FFF4E1; /* Vanilla Cream */
+            text-decoration: none;
+            font-size: 1.3rem; /* Larger mobile menu links */
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        #mobile-menu-content ul li a:hover {
+            color: #FFE28A; /* Pastel Marigold */
+        }
 
-                mobileMenuButton.addEventListener('click', () => {
-                    mobileMenu.style.display = 'flex';
-                });
+        #view-menu-button {
+            background-color: #F5B971; /* Saffron Blush */
+            color: white;
+            border: none;
+            border-radius: 10px; /* More rounded */
+            padding: 14px 30px; /* Larger padding */
+            font-size: 1.15rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+            text-decoration: none;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+            margin-top: 30px; /* Increased top margin */
+            display: inline-block; /* Added to control width */
+            width: auto;      /* Adjust width to content */
+            min-width: 200px; /* Minimum width for better appearance */
+        }
+        #view-menu-button:hover {
+            background-color: #e0a55d; /* Darker Saffron Blush */
+            transform: scale(1.05);
+        }
 
-                mobileMenuClose.addEventListener('click', () => {
-                    mobileMenu.style.display = 'none';
-                });
-            </script>
-        </body>
-        </html>
+        /* Reservation Form Styling */
+        #reservations .container {
+            max-width: 600px; /* Limit width of the form */
+            text-align: left; /* Align form text to the left */
+            padding: 40px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+            margin-top: 30px;
+        }
+        #reservations h2 {
+            text-align: center; /* Center the reservation heading */
+            margin-bottom: 30px;
+        }
+        #reservations .form-group {
+            margin-bottom: 20px; /* Increased spacing between form elements */
+        }
+        #reservations label {
+            display: block;
+            color: #555;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        #reservations input[type="text"],
+        #reservations input[type="email"],
+        #reservations input[type="tel"],
+        #reservations input[type="date"],
+        #reservations input[type="time"],
+        #reservations select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 1rem;
+            color: #333;
+        }
+        #reservations input:focus,
+        #reservations select:focus {
+            outline: none;
+            border-color: #F5B971; /* Highlight on focus */
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+        #reservations button[type="submit"] {
+            background-color: #5cb85c; /* Green submit button */
+            color: white;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.15rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+            margin-top: 25px;
+            width: 100%; /* Make button full width */
+        }
+        #reservations button[type="submit"]:hover {
+            background-color: #4cae4c;
+            transform: scale(1.02);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header nav {
+                display: none;
+            }
+            .mobile-menu-button {
+                display: block;
+            }
+            header .container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 20px 30px;
+            }
+            header img {
+                max-height: 80px;
+                margin-right: 20px;
+                vertical-align: middle;
+            }
+            header .logo {
+                font-size: 2.5rem;
+                font-weight: bold;
+                text-align: center;
+            }
+            section {
+                padding: 30px 0;
+            }
+            section h2 {
+                font-size: 2.4rem;
+                margin-bottom: 20px;
+            }
+            section p {
+                font-size: 1.1rem;
+                margin-bottom: 25px;
+                padding: 0 15px;
+            }
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 0 15px;
+            }
+            .grid-item {
+                padding: 25px;
+            }
+            .grid-item h3 {
+                font-size: 1.5rem;
+                margin-bottom: 15px;
+            }
+            .grid-item p {
+                font-size: 1rem;
+                margin-bottom: 1rem;
+            }
+            .grid-item button {
+                font-size: 1.05rem;
+                padding: 12px 25px;
+            }
+            footer {
+                padding: 20px 0;
+                font-size: 0.9rem;
+            }
+            #reservations .container {
+                padding: 30px;
+            }
+        }
+    </style>
+<body>
+    <header>
+        <div class="container">
+            <img src="thedancingokralogo.png" alt="Dancing Okra Logo" style="float: left; max-height: 100px; margin-right: 20px;">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#reservations">Reservations</a></li>
+                </ul>
+            </nav>
+            <button id="mobile-menu-button" class="mobile-menu-button">Menu</button>
+        </div>
+    </header>
+
+    <div id="mobile-menu">
+        <div id="mobile-menu-content">
+            <button id="mobile-menu-close" class="mobile-menu-close">X</button>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#reservations">Reservations</a></li>
+            </ul>
+        </div>
+    </div>
+    <main>
+        <section id="home">
+            <div class="container">
+                <h1>Welcome to The Dancing Okra</h1>
+                <h2>Where every bite has a beat</h2>
+            </div>
+        </section>
+        <section id="about">
+            <div class="container">
+                <h2>Our Story</h2>
+                <p>Dancing Okra is more than just a restaurant; it's a celebration of vibrant flavors, lively music, and warm community. Inspired by the rich culinary traditions of India and the joyful spirit of Bollywood, we aim to create an unforgettable dining experience. Our chefs use only the freshest ingredients to craft authentic dishes, while our live Bollywood music nights add a unique and energetic ambiance. Come and experience the magic where every meal is a dance!</p>
+            </div>
+        </section>
+        <section id="menu">
+            <div class="container">
+                <h2>Our Delicious Menu</h2>
+                <p>Explore our diverse menu featuring a range of flavorful Indian dishes, from classic curries to tandoori specialties and delightful vegetarian options. Each dish is prepared with passion and authentic spices to tantalize your taste buds.</p>
+                <div class="grid">
+                    <div class="grid-item">
+                        <h3>Okra Curry Special</h3>
+                        <p>Our signature dish! Tender okra cooked in a rich and aromatic blend of spices.</p>
+                        <p>$30</p>
+                        <button>Order Now</button>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Paneer Tikka Masala</h3>
+                        <p>Mouth watering chargrilled paneer with flavorful spicy gravy.</p>
+                        <p>$18</p>
+                        <button>Order Now</button>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Vegetable Biryani</h3>
+                        <p>Fragrant basmati rice cooked with mixed vegetables, herbs, and spices.</p>
+                        <p>$19</p>
+                        <button>Order Now</button>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Dal Soup</h3>
+                        <p>Soul nourishing soup with lemon juice and rich lentils and veggies </p>
+                        <p>$15</p>
+                        <button>Order Now</button>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Red Lentil Curry</h3>
+                        <p>Red lentils simmered in a fragrant and spicy onion tomato curry base</p>
+                        <p>$22</p>
+                        <button>Order Now</button>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Gobi Manchurian</h3>
+                        <p>Crispy cauliflower coated in a sweet and tangy sauce</p>
+                        <p>$20</p>
+                        <button>Order Now</button>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Saag Paneer</h3>
+                        <p>Creamy spinach and homemade Indian cheese cooked with mild spices.</p>
+                        <p>$17</p>
+                        <button>Order Now</button>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Garlic Naan</h3>
+                        <p>Soft and fluffy Indian bread topped with fresh garlic and cilantro.</p>
+                        <p>$15</p>
+                        <button>Order Now</button>
+                    </div>
+                </div>
+                <a href="#menu"><button id="view-menu-button">View the Full Menu</button></a>
+            </div>
+        </section>
+        <section id="reviews">
+            <div class="container">
+                <h2>What Our Customers Say</h2>
+                <div class="grid">
+                    <div class="grid-item">
+                        <h3>Raja Gomez</h3>
+                        <p>"Absolutely incredible experience! Dancing Okra delivers on every level from the live Bollywood music which had everyone tapping their feet to the signature Okra Curry which was out of this world. The spices were rich and the okra was perfectly cooked, and the ambiance felt so warm and welcoming. I can't wait to come back!"</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Analise Godovan</h3>
+                        <p>"Enchanting atmosphere with Bollywood tunes and cozy decor. The food was perfectly seasoned and cooked, the staff was super friendly and made us feel right at home!"</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Aniska Madhavan</h3>
+                        <p>"The live music nights are so fun! Every bite of the food felt like a journey through the flavors of India. Loved the attention to detail with the decor and lighting."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Visit Us At: 42075 Ladyfinger Lane, Manchuria, VA, USA 70342</p>
+                <p>Email: thedancingokra@gmail.com</p>
+                <p>Instagram @dancingokra.veg</p>
+                <p>Store Hours: 11:00 AM - 11:00 PM Daily</p>
+                <img src=" dancingokralogo.png" alt="Dancing Okra Logo" style="max-height: 100px; margin-top: 20px;"></img>
+            </div>
+        </section>
+        <section id="reservations">
+            <div class="container">
+                <h2>Make a Reservation</h2>
+                <p>Book your table in advance to ensure you get the best spot, especially on our live music nights!</p>
+                <form class="reservation-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" placeholder="Your Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date:</label>
+                        <input type="date" id="date">
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Time:</label>
+                        <input type="time" id="time">
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Number of Guests:</label>
+                        <select id="guests">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5+</option>
+                        </select>
+                    </div>
+                    <button type="submit">Request Reservation</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Dancing Okra. All rights reserved.</p>
+            <p>Designed with love in South Riding, Virginia.</p>
+        </div>
+    </footer>
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.style.display = 'flex';
+        });
+
+        mobileMenuClose.addEventListener('click', () => {
+            mobileMenu.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
