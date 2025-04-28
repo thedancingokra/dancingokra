@@ -1,37 +1,51 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
-    <link href="https://nam04.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffonts.googleapis.com%2Fcss2%3Ffamily%3DPoppins%3Awght%40400%3B600%26display%3Dswap&data=05%7C02%7C1010894%40lcps.org%7Cbb01affcb58b43e3a88708dd85e7876c%7C86750b0cee12463db28880f7b2b34689%7C0%7C0%7C638813951812593956%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C60000%7C%7C%7C&sdata=WqjNs6r0RppYEWYC7O6wI2s3alVqcM9HHxWdeixp7Wg%3D&reserved=0"
-rel="stylesheet">
+    <meta name="description" content="The Dancing Okra - Menu">
+    <title>The Dancing Okra | Menu</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
+       body {
+            font-family: 'Lora', serif;
+            background-color: #FFF4E1;
+            color: #7B5E57;
             margin: 0;
             padding: 0;
-            background-color: #f8f8f8;
-            color: #333;
             line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
-
+        .container h1 {
+            font-size: 70px;
+        }
+        header, footer, section {
+            margin-top: 0px;
+        }
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 30px;
         }
         header {
-            background-color: #243119; /* Soft Coral Red */
+            background-color: #243119;
             color: white;
             text-align: center;
-            padding: 0px 0; /* Increased vertical padding */
-            border-bottom: 3px solid #FFCC9C; /* Thicker border */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow */
-            display: flex; /* Added for layout */
-            align-items: center; /* Vertically center items */
-            justify-content: space-between; /* Space out items */
+            padding: 0px 0;
+            border-bottom: 3px solid #FFCC9C;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+        }
+        header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
         header .logo {
             margin-bottom: 15px;
@@ -44,44 +58,48 @@ rel="stylesheet">
             margin: 0;
         }
         header nav ul li {
-            margin: 0 20px; /* Increased horizontal margin */
+            margin: 0 20px; 
         }
         header nav ul li a {
             text-decoration: none;
             color: white;
             font-weight: bolder;
             transition: color 0.3s ease;
-            font-size: 24px; /* Slightly larger navigation links */
+            font-size: 24px;
         }
         header nav ul li a:hover {
-            color: #FFE28A; /* Pastel Marigold */
+            color: #FFE28A; 
         }
-        
-        img{
+        section {
+            padding: 40px; 
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0; 
+        }
+        section:last-child {
+            border-bottom: none; 
+        }
+        section h2, section h1 {
+            font-size: 48px; 
+            font-weight: bold;
+            margin-bottom: 25px;
+            color: #243119; 
+        }
+        section p {
+            font-size: 1.15rem; 
+            line-height: 1.8; 
+            margin-bottom: 30px;
+            color: #7B5E57; 
+            max-width: 800px; 
+            margin-left: auto;
+            margin-right: auto;
+        }
+        img {
             align-content: center;
             align-items: center;
             justify-content: center;
             justify-items: center;
             justify-self: center;
         }
-
-        main {
-            padding: 30px 0;
-        }
-
-        section {
-            margin-bottom: 50px;
-        }
-
-        section h2 {
-            font-size: 2em;
-            color: #055204;;
-            margin-bottom: 20px;
-            text-align: center;
-            border-bottom: 2px solid #055204;
-            padding-bottom: 10px;
-        }
-
         .menu-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -143,21 +161,24 @@ rel="stylesheet">
             color: #055204;
             font-weight: bold;
         }
+        
         footer {
-            background-color: #243119;
-            color: white;
             text-align: center;
-            padding: 20px;
-            margin-top: 30px;
+            padding: 30px 0;
+            background-color: #7B5E57;
+            color: #FFF4E1;
+            font-size: 1rem;
         }
-
-        /* Mobile Menu Styles */
+        footer p {
+            color: #FFE28A;
+            margin: 8px 0;
+        }
         .mobile-menu-button {
             display: none;
             background: none;
             border: none;
             color: white;
-            font-size: 1.3rem; /* Slightly larger mobile menu button */
+            font-size: 1.3rem;
             cursor: pointer;
             padding: 12px 20px;
             font-weight: bold;
@@ -169,14 +190,14 @@ rel="stylesheet">
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.9); /* Slightly darker background */
+            background-color: rgba(0, 0, 0, 0.9);
             z-index: 10;
             align-items: center;
             justify-content: center;
         }
         #mobile-menu-content {
-            background-color: #243119; /* Soft Coral Red */
-            padding: 40px; /* Increased padding */
+            background-color: #243119;
+            padding: 40px;
             border-radius: 12px;
             text-align: center;
             position: relative;
@@ -188,8 +209,8 @@ rel="stylesheet">
             right: 20px;
             background: none;
             border: none;
-            color: #FFF4E1; /* Vanilla Cream */
-            font-size: 1.75rem; /* Larger close button */
+            color: #FFF4E1;
+            font-size: 1.75rem; 
             cursor: pointer;
             opacity: 0.8;
             transition: opacity 0.2s ease-in-out;
@@ -203,20 +224,40 @@ rel="stylesheet">
             margin: 0;
         }
         #mobile-menu-content ul li {
-            margin-bottom: 25px; /* Increased spacing in mobile menu */
+            margin-bottom: 25px; 
         }
         #mobile-menu-content ul li a {
-            color: #FFF4E1; /* Vanilla Cream */
+            color: #FFF4E1; 
             text-decoration: none;
-            font-size: 1.3rem; /* Larger mobile menu links */
+            font-size: 1.3rem; 
             font-weight: bold;
             transition: color 0.3s ease;
         }
         #mobile-menu-content ul li a:hover {
-            color: #FFE28A; /* Pastel Marigold */
+            color: #FFE28A; 
         }
 
-        @media (max-width: 768px) {
+        #view-menu-button {
+            background-color: #F5B971; 
+            color: white;
+            border: none;
+            border-radius: 10px; 
+            padding: 14px 30px; 
+            font-size: 1.15rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+            text-decoration: none;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+            margin-top: 30px; 
+            display: inline-block; 
+            width: auto;      
+            min-width: 200px; 
+        }
+        #view-menu-button:hover {
+            background-color: #e0a55d; 
+            transform: scale(1.05);
+        }
+        @media (max-width: 1000px) {
             header nav {
                 display: none;
             }
@@ -229,6 +270,11 @@ rel="stylesheet">
                 justify-content: space-between;
                 padding: 20px 30px;
             }
+            header .container > img {
+                max-height: 80px;
+                margin-right: 20px;
+                vertical-align: middle;
+            }
             header img {
                 max-height: 80px;
                 margin-right: 20px;
@@ -239,231 +285,235 @@ rel="stylesheet">
                 font-weight: bold;
                 text-align: center;
             }
+            section {
+                padding: 30px 0;
+            }
+            section h2 {
+                font-size: 2.4rem;
+                margin-bottom: 20px;
+            }
+            section p {
+                font-size: 1.1rem;
+                margin-bottom: 25px;
+                padding: 0 15px;
+            }
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 0 15px;
+            }
+            .grid-item {
+                padding: 25px;
+            }
+            .grid-item h3 {
+                font-size: 1.5rem;
+                margin-bottom: 15px;
+            }
+            .grid-item p {
+                font-size: 1rem;
+                margin-bottom: 1rem;
+            }
+            .grid-item button {
+                font-size: 1.05rem;
+                padding: 12px 25px;
+            }
+            footer {
+                padding: 20px 0;
+                font-size: 0.9rem;
+            }
+            #reservations .container {
+                padding: 30px;
+            }
         }
-
     </style>
 </head>
 <body>
-    <header>
-        <div id="mobile-menu">
-            <div id="mobile-menu-content">
-                <button id="mobile-menu-close" class="mobile-menu-close">X</button>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#reviews">Reviews</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                    <li><a href="#reservations">Reservations</a></li>
-                </ul>
-            </div>
-        </div>
-
         <header>
             <div class="container">
                 <img src="thedancingokralogo.png" alt="Dancing Okra Logo" style="float: left; max-height: 100px; margin-right: 20px; padding: 10px;">
                 <nav>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#menu">Menu</a></li>
-                        <li><a href="#reviews">Reviews</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
-                        <li><a href="#reservations">Reservations</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="refrences.html">Refrences</a></li>
                     </ul>
                 </nav>
-                
+                <button id="mobile-menu-button" class="mobile-menu-button">Menu</button>
             </div>
         </header>
-        
-    </header>
-    <main class="container">
-        <section id="appetizers">
-            <h2>Appetizers</h2>
-            <div class="menu-grid">
-                <div class="menu-item">
-                    <img
-src="samosas.png"
-alt="Appetizer 1">
-                    <h3>Cocktail Samosa</h3>
-                    <p>Golden pastry pockets filled with savory blend of spiced potatoes and peas.</p>
-                    <span>$5.99</span>
-                </div>
-                <div class="menu-item">
-                    <img
-src="panipuri.png"
-alt="Appetizer 2">
-                    <h3>Pani Puri</h3>
-                    <p>Crispy puris filled with mashed potatoes, tamarind, chutney and zesty mint coriander.</p>
-                    <span>$7.50</span>
-                </div>
-                <div class="menu-item">
-                    <img
-src="dhokla.png"
-alt="Appetizer 3">
-                    <h3>Rava Dhokla</h3>
-                    <p>Fluffy steamed cakes made with semolina, yogurt, ginger and a hint of tumeric.</p>
-                    <span>$6.00</span>
-                </div>
-                <div class="menu-item">
-                    <img
-src="pakora.png"
-alt="Appetizer 4">
-                    <h3>Pakora</h3>
-                    <p>Golden brown fritters made with a variety of vegetables and deep fried to perfection.</p>
-                    <span>$5.99</span>
-                </div>
-                <div class="menu-item">
-                    <img
-src="pavbhaji.png"
-alt="Appetizer 4">
-                    <h3>Pav Bhaji</h3>
-                    <p>Flavorful medley of mashed vegetables cooked in spices and served in buttered pav buns.</p>
-                    <span>$6.99</span>
-                </div>
-                <div class="menu-item">
-                    <img
-src="chaat.png"
-alt="Appetizer 5">
-                    <h3>Corn Chaat</h3>
-                    <p>Tangy streeet snack made with sweet corn tossed in a blend of chaat masala.</p>
-                    <span>$5.99</span>
-                </div>
+    
+        <div id="mobile-menu">
+            <div id="mobile-menu-content">
+                <button id="mobile-menu-close" class="mobile-menu-close">X</button>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                </ul>
             </div>
-        </section>
-        <section id="entrees">
-            <h2>Entrees</h2>
-            <div class="menu-grid">
+        </div>
+    
+        <main class="container">
+            <section id="appetizers">
+                <h2>Appetizers</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="samosas.png" alt="Appetizer 1">
+                        <h3>Cocktail Samosa</h3>
+                        <p>Golden pastry pockets filled with savory blend of spiced potatoes and peas.</p>
+                        <span>$5.99</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="panipuri.png" alt="Appetizer 2">
+                        <h3>Pani Puri</h3>
+                        <p>Crispy puris filled with mashed potatoes, tamarind, chutney and zesty mint coriander.</p>
+                        <span>$7.50</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="dhokla.png" alt="Appetizer 3">
+                        <h3>Rava Dhokla</h3>
+                        <p>Fluffy steamed cakes made with semolina, yogurt, ginger and a hint of tumeric.</p>
+                        <span>$6.00</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="pakora.png" alt="Appetizer 4">
+                        <h3>Pakora</h3>
+                        <p>Golden brown fritters made with a variety of vegetables and deep fried to perfection.</p>
+                        <span>$5.99</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="pavbhaji.png" alt="Appetizer 4">
+                        <h3>Pav Bhaji</h3>
+                        <p>Flavorful medley of mashed vegetables cooked in spices and served in buttered pav buns.</p>
+                        <span>$6.99</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="chaat.png" alt="Appetizer 5">
+                        <h3>Corn Chaat</h3>
+                        <p>Tangy streeet snack made with sweet corn tossed in a blend of chaat masala.</p>
+                        <span>$5.99</span>
+                    </div>
+                </div>
+            </section>
+            <section id="entrees">
+                <h2>Entrees</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="okracurry.png" alt="Entree 1">
+                        <h3>Okra Curry Special</h3>
+                        <p>Our signature dish! Tender okra cooked in a rich and aromatic blend of spices..</p>
+                        <span>$30.00</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="paneertikka.png" alt="Entree 2">
+                        <h3>Paneer Tikka Masala</h3>
+                        <p>Mouth watering chargrilled paneer with flavorful spicy gravy.</p>
+                        <span>$18.99</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="vegbir.png" alt="Entree 3">
+                        <h3>Vegetable Biryani</h3>
+                        <p>Fragrant basmati rice cooked with mized vegetables, herbs, and spices.</p>
+                        <span>$19.00</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="dalsoup.png" alt="Entree 4">
+                        <h3>Dal soup</h3>
+                        <p>Soul nourishing soup with lemon juice, rich lentils, and veggies.</p>
+                        <span>$15.99</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="redlentil.png" alt="Entree 5">
+                        <h3>Red Lentil Curry</h3>
+                        <p>Red lentils simmered in a fragrant and spicyy onion tomato curry base.</p>
+                        <span>$22.50</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="gobimanchu.png" alt="Entree 6">
+                        <h3>Gobi Manchurian</h3>
+                        <p>Crispy cauliflower coated in a sweet and tangy sauce.</p>
+                        <span>$20.00</span>
+                    </div>
+               
                 <div class="menu-item">
-                    <img
-src="okracurry.png"
-alt="Entree 1">
-                    <h3>Okra Curry Special</h3>
-                    <p>Our signature dish! Tender okra cooked in a rich and aromatic blend of spices..</p>
-                    <span>$30.00</span>
+                    <img src="chanamasala.png" alt="Entree 7">
+                    <h3>Chana Masala</h3>
+                    <p>Chickpea curry made with heavenly spices.</p>
+                    <span>$17.50</span>
                 </div>
                 <div class="menu-item">
-                    <img
-src="paneertikka.png"
-alt="Entree 2">
-                    <h3>Paneer Tikka Masala</h3>
-                    <p>Mouth watering chargrilled paneer with flavorful spicy gravy.</p>
-                    <span>$18.99</span>
-                </div>
-                <div class="menu-item">
-                    <img
-src="vegbir.png"
-alt="Entree 3">
-                    <h3>Vegetable Biryani</h3>
-                    <p>Fragrant basmati rice cooked with mized vegetables, herbs, and spices.</p>
+                    <img src="potatocurry.png" alt="Entree 8">
+                    <h3>Creamy Potato Curry</h3>
+                    <p>Creamy and comforting potato curry made with a coconut based sauce.</p>
                     <span>$19.00</span>
                 </div>
                 <div class="menu-item">
-                    <img
-src="dalsoup.png"
-alt="Entree 4">
-                    <h3>Dal soup</h3>
-                    <p>Soul nourishing soup with lemon juice, rich lentils, and veggies.</p>
-                    <span>$15.99</span>
+                    <img src="eggplantcurry.png" alt="Entree 9">
+                    <h3>Eggplant Curry</h3>
+                    <p>Tender eggplant paired with nutty chickpeas in a creamy sauce.</p>
+                    <span>$19.00</span>
                 </div>
-                <div class="menu-item">
-                    <img
-src="redlentil.png"
-alt="Entree 5">
-                    <h3>Red Lentil Curry</h3>
-                    <p>Red lentils simmered in a fragrant and spicyy onion tomato curry base.</p>
-                    <span>$22.50</span>
+            </section>
+            <section id="desserts">
+                <h2>Desserts</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="gulab.png" alt="Dessert 1">
+                        <h3>Gulab Jamun</h3>
+                        <p>Delicately fried dough drenched in a sugar syrup infused with hints of rose water.</p>
+                        <span>$7.99</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="kaju.png" alt="Dessert 2">
+                        <h3>Kaju Khatli</h3>
+                        <p>Diamond shaped pieces made from finely ground cashews and sugar.</p>
+                        <span>$6.50</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="rasmalai.png" alt="Dessert 3">
+                        <h3>Rasmalai</h3>
+                        <p>Made from fresh paneer immersed in a chilled saffron infused milk.</p>
+                        <span>$7.00</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="pak.png" alt="Dessert 4">
+                        <h3>Mysore Pak</h3>
+                        <p>Traditional sweet made from a rich blend of flour, ghee, and sugar.</p>
+                        <span>$5.00</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="laddu.png" alt="Dessert 4">
+                        <h3>Rava Laddu</h3>
+                        <p>Round treats made from semolina, ghee and sugar.</p>
+                        <span>$6.00</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="gujiya.png" alt="Dessert 5">
+                        <h3>Gujiya</h3>
+                        <p>Golden pastry pocket filled with khoya and nuts and deep fried to perfection.</p>
+                        <span>$6.00</span>
+                    </div>
                 </div>
-                <div class="menu-item">
-                    <img
-src="gobimanchu.png"
-alt="Entree 6">
-                    <h3>Gobi Manchurian</h3>
-                    <p>Crispy cauliflower coated in a sweet and tangy sauce.</p>
-                    <span>$20.00</span>
-                </div>
-           
-            <div class="menu-item">
-                <img
-src="chanamasala.png"
-alt="Entree 7">
-                <h3>Chana Masala</h3>
-                <p>Chickpea curry made with heavenly spices.</p>
-                <span>$17.50</span>
-            </div>
-            <div class="menu-item">
-                <img
-src="potatocurry.png"
-alt="Entree 8">
-                <h3>Creamy Potato Curry</h3>
-                <p>Creamy and comforting potato curry made with a coconut based sauce.</p>
-                <span>$19.00</span>
-            </div>
-            <div class="menu-item">
-                <img
-src="eggplantcurry.png"
-alt="Entree 9">
-                <h3>Eggplant Curry</h3>
-                <p>Tender eggplant paired with nutty chickpeas in a creamy sauce.</p>
-                <span>$19.00</span>
-            </div>
-        </section>
-        <section id="desserts">
-            <h2>Desserts</h2>
-            <div class="menu-grid">
-                <div class="menu-item">
-                    <img
-src="gulab.png"
-alt="Dessert 1">
-                    <h3>Gulab Jamun</h3>
-                    <p>Delicately fried dough drenched in a sugar syrup infused with hints of rose water.</p>
-                    <span>$7.99</span>
-                </div>
-                <div class="menu-item">
-                    <img
-src="kaju.png"
-alt="Dessert 2">
-                    <h3>Kaju Khatli</h3>
-                    <p>Diamond shaped pieces made from finely ground cashews and sugar.</p>
-                    <span>$6.50</span>
-                </div>
-                <div class="menu-item">
-                    <img
-src="rasmalai.png"
-alt="Dessert 3">
-                    <h3>Rasmalai</h3>
-                    <p>Made from fresh paneer immersed in a chilled saffron infused milk.</p>
-                    <span>$7.00</span>
-                </div>
-                <div class="menu-item">
-                    <img
-src="pak.png"
-alt="Dessert 4">
-                    <h3>Mysore Pak</h3>
-                    <p>Traditional sweet made from a rich blend of flour, ghee, and sugar.</p>
-                    <span>$5.00</span>
-                </div>
-                <div class="menu-item">
-                    <img
-src="laddu.png"
-alt="Dessert 4">
-                    <h3>Rava Laddu</h3>
-                    <p>Round treats made from semolina, ghee and sugar.</p>
-                    <span>$6.00</span>
-                </div>
-                <div class="menu-item">
-                    <img
-src="gujiya.png"
-alt="Dessert 5">
-                    <h3>Gujiya</h3>
-                    <p>Golden pastry pocket filled with khoya and nuts and deep fried to perfection.</p>
-                    <span>$6.00</span>
-                </div>
-            </div>
-        </section>
+            </section>
     </main>
     <footer>
-        <p>&copy; 2025 Restaurant Name. All rights reserved.</p>
+        <p>&copy; 2023 The Dancing Okra. All rights reserved.</p>
     </footer>
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuCloseButton = document.getElementById('mobile-menu-close');
+       
+        if (mobileMenuButton && mobileMenu && mobileMenuCloseButton) {
+        mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.style.display = 'flex'; 
+        });
+       
+        mobileMenuCloseButton.addEventListener('click', () => {
+        mobileMenu.style.display = 'none';
+        });
+        }
+        </script>
 </body>
 </html>
