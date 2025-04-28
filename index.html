@@ -111,6 +111,52 @@
             justify-items: center;
             justify-self: center;
         }
+        .story-section {
+        max-width: 1500px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        align-items: center;
+        align-self: center;
+        }
+
+        .story-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 60px;
+            gap: 50px;
+        }
+
+        .story-container.right-image {
+            flex-direction: row-reverse;
+        }
+
+        .story-image {
+        width: 20%;
+        height: auto;
+        border-radius: 10px;
+        object-fit: cover;
+        display: flex;
+        float: right;
+        }
+
+        .story-text {
+        width: 50%;
+        margin-left: 5%;
+        }
+
+        .story-text h2 {
+        font-size: 32px;
+        color: #2e2e2e;
+        margin-bottom: 15px;
+        }
+
+        .story-text p {
+        font-size: 20px;
+        color: #555;
+        line-height: 1.7;
+        }
+
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Slightly wider minimum width */
@@ -166,6 +212,8 @@
             color: #FFE28A; /* Pastel Marigold */
             margin: 8px 0;
         }
+
+
         /* Mobile Menu Styles */
         .mobile-menu-button {
             display: none;
@@ -416,13 +464,102 @@
                 <h2>Where every bite has a beat</h2>
             </div>
         </section>
-        <section id="about">
+        <!-- <section id="about">
             <div class="container">
                 <h2>Our Story</h2>
-                <p>Dancing Okra is more than just a restaurant; it's a celebration of vibrant flavors, lively music, and warm community. Inspired by the rich culinary traditions of India and the joyful spirit of Bollywood, we aim to create an unforgettable dining experience. Our chefs use only the freshest ingredients to craft authentic dishes, while our live Bollywood music nights add a unique and energetic ambiance. Come and experience the magic where every meal is a dance!</p>
-                <img src="aboutusimage.png" alt="About Us" style="width: 100%; max-width: 1200px; margin-top: 20px; text-align: center;">
+                <img src="livemusic.jpg" alt="About Us" style="display: flex; width: 100%; max-width: 300px; margin-top: 20px; margin-right: 100px; float: left;">
+                <p>The story of The Dancing Okra began with a simple idea: to create a place that feels like home, full of warmth, music, and the rich, vibrant flavors of India. Growing up, food was always at the heart of our gatherings, but it wasn’t just about what was on the plate. It was about the laughter, the songs, and the feeling that you were part of something bigger. We wanted to bring that feeling to life in a restaurant where every detail, from the ingredients to the atmosphere, is a reflection of that spirit.
+                    <br> <br> At The Dancing Okra, we take pride in growing many of our vegetables right here in-house. We believe there is something special about food that comes from your own soil, cared for with your own hands. When you taste our dishes, you’re tasting more than just a recipe, you’re tasting the connection to the earth and the respect we have for every ingredient we use.
+                    
+                    <br> <br> To create a truly immersive experience, we offer live music throughout the week. Music is such an important part of Indian culture. Whether it’s the soft hum of a sitar or the lively beat of a dhol, music brings people together and turns a meal into a celebration. Our hope is that when you visit The Dancing Okra, you don’t just enjoy a delicious meal, but you feel transported — as if you’ve stepped into a little piece of India itself.
+                    
+                    <br> <br> Our menu is carefully crafted to honor the traditional dishes that often don’t get the spotlight they deserve. You won't find overly commercialized versions of Indian food here. Instead, we serve the comforting, rich, soulful dishes that you might find at a family gathering in a small Indian town.
+                    
+                    <br> <br> At the heart of our menu is our signature dish, the Okra Curry Special. This dish holds a special place in our hearts because it was inspired by our Grandma. Growing up, okra curry was her favorite meal, and she made it with such love and care that it became a symbol of comfort and happiness for our family. We knew there was no better way to honor her memory than to make her beloved okra curry the centerpiece of our restaurant.
+                    
+                    <br> <br> The Dancing Okra is more than just a place to eat. It is a place to gather, to celebrate, and to experience the beautiful flavors, sounds, and traditions that have shaped our lives. We can’t wait to share it all with you.</p>
             </div>
-        </section>
+        </section> -->
+        <section class="story-section">
+            <div class="story-container">
+              <img src="ceilingplantsview.jpg" alt="Live music stage" class="story-image">
+              <div class="story-text">
+                <h2>Our Beginning</h2>
+                <p>
+                The Dancing Okra started the way a lot of good things do — around a family table. 
+                We grew up with food at the heart of everything. 
+                It was never just about what was on our plates. 
+                It was about who we were sharing it with, the stories that got louder as the night went on, and the music that always seemed to be playing somewhere in the background. 
+                We missed that feeling. 
+                We wanted to build a place that brought it all together again. 
+                A place that felt warm and real, where good food and good music made you feel right at home from the minute you walked in.
+                </p>
+              </div>
+            </div>
+          
+            <div class="story-container right-image">
+              <img src="garden.jpg" alt="Farm grown vegetables" class="story-image">
+              <div class="story-text">
+                <h2>Rooted in Freshness</h2>
+                <p>
+                A lot of the vegetables we use here are grown by us. 
+                Right here. 
+                It is something we are proud of. 
+                We believe food tastes different when you know where it came from and you had a hand in growing it. 
+                It feels different too. When you eat with us, you are not just eating something fresh. 
+                You are eating something we put time into. 
+                Something we watched grow and cared for. 
+                It is simple but it means everything to us.
+                </p>
+              </div>
+            </div>
+          
+            <div class="story-container">
+              <img src="livemusic.jpg" alt="Okra Curry Special" class="story-image" style="float: right;">
+              <div class="story-text">
+                <h2>Music that Moves You</h2>
+                <p>Music has always been part of our story. 
+                At family gatherings, there was always a song playing somewhere. 
+                That is why we have live music at The Dancing Okra. 
+                Sometimes it is soft and slow. 
+                Sometimes it is full of energy and makes you want to move. 
+                Either way, it brings the room to life. 
+                We want you to feel like you are not just eating a meal but stepping into a moment. 
+                Something a little louder, a little brighter, and a lot more full of heart.
+                </p>
+              </div>
+            </div>
+
+            <div class="story-container right-image">
+                <img src="okracurry.png" alt="Okra Curry Special" class="story-image" style="float: right;">
+                <div class="story-text">
+                  <h2>Our Signature Dish</h2>
+                  <p>There was never any doubt about what dish had to be at the center of our menu. 
+                    It had to be Grandma’s okra curry. 
+                    She made it all the time when we were growing up and somehow it always tasted like love. 
+                    It was the dish everyone waited for. 
+                    It brought people home. When we opened the restaurant, we knew we wanted to share that same feeling. 
+                    Our Okra Curry Special is a small way to keep her with us and to pass that warmth on to you.
+                  </p>
+                </div>
+              </div>
+
+            <div class="story-container">
+                <img src="outsideview.jpg" alt="Okra Curry Special" class="story-image">
+                <div class="story-text">
+                    <h2>More Than a Meal</h2>
+                    <p>
+                        The Dancing Okra is not just a restaurant. 
+                        It is a piece of who we are. 
+                        It is food made with real care, music that fills the room, and moments that feel like they matter. 
+                        We are here to offer more than just dinner. 
+                        We are here to give you a place to slow down, to laugh, to listen, and to feel at home. 
+                        We are so happy you are here and we cannot wait to share it all with you.
+                    </p>
+                </div>
+            </div>
+          </section>
+
         <section id="menu">
             <div class="container">
                 <h2>Our Delicious Menu</h2>
