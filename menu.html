@@ -1,0 +1,469 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link href="https://nam04.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffonts.googleapis.com%2Fcss2%3Ffamily%3DPoppins%3Awght%40400%3B600%26display%3Dswap&data=05%7C02%7C1010894%40lcps.org%7Cbb01affcb58b43e3a88708dd85e7876c%7C86750b0cee12463db28880f7b2b34689%7C0%7C0%7C638813951812593956%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C60000%7C%7C%7C&sdata=WqjNs6r0RppYEWYC7O6wI2s3alVqcM9HHxWdeixp7Wg%3D&reserved=0"
+rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #243119; /* Soft Coral Red */
+            color: white;
+            text-align: center;
+            padding: 0px 0; /* Increased vertical padding */
+            border-bottom: 3px solid #FFCC9C; /* Thicker border */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+            display: flex; /* Added for layout */
+            align-items: center; /* Vertically center items */
+            justify-content: space-between; /* Space out items */
+        }
+        header .logo {
+            margin-bottom: 15px;
+        }
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 30px 0;
+            margin: 0;
+        }
+        header nav ul li {
+            margin: 0 20px; /* Increased horizontal margin */
+        }
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bolder;
+            transition: color 0.3s ease;
+            font-size: 24px; /* Slightly larger navigation links */
+        }
+        header nav ul li a:hover {
+            color: #FFE28A; /* Pastel Marigold */
+        }
+        
+        img{
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+            justify-self: center;
+        }
+
+        main {
+            padding: 30px 0;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        section h2 {
+            font-size: 2em;
+            color: #055204;;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid #055204;
+            padding-bottom: 10px;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .menu-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 992px) {
+            .menu-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+
+        .menu-item {
+            background-color: rgb(235, 184, 107);
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Push content to edges */
+            height: 100%;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .menu-item img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            height: 200px; /* Fixed height for images */
+            object-fit: cover;  /* Ensure images cover the space */
+        }
+
+        .menu-item h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #055204;
+        }
+
+        .menu-item p {
+            color: #055204;
+            margin-bottom: 15px;
+        }
+
+        .menu-item span {
+            font-size: 1.5em;
+            color: #055204;
+            font-weight: bold;
+        }
+        footer {
+            background-color: #243119;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        /* Mobile Menu Styles */
+        .mobile-menu-button {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.3rem; /* Slightly larger mobile menu button */
+            cursor: pointer;
+            padding: 12px 20px;
+            font-weight: bold;
+        }
+        #mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9); /* Slightly darker background */
+            z-index: 10;
+            align-items: center;
+            justify-content: center;
+        }
+        #mobile-menu-content {
+            background-color: #243119; /* Soft Coral Red */
+            padding: 40px; /* Increased padding */
+            border-radius: 12px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        #mobile-menu-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: #FFF4E1; /* Vanilla Cream */
+            font-size: 1.75rem; /* Larger close button */
+            cursor: pointer;
+            opacity: 0.8;
+            transition: opacity 0.2s ease-in-out;
+        }
+        #mobile-menu-close:hover {
+            opacity: 1;
+        }
+        #mobile-menu-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #mobile-menu-content ul li {
+            margin-bottom: 25px; /* Increased spacing in mobile menu */
+        }
+        #mobile-menu-content ul li a {
+            color: #FFF4E1; /* Vanilla Cream */
+            text-decoration: none;
+            font-size: 1.3rem; /* Larger mobile menu links */
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        #mobile-menu-content ul li a:hover {
+            color: #FFE28A; /* Pastel Marigold */
+        }
+
+        @media (max-width: 768px) {
+            header nav {
+                display: none;
+            }
+            .mobile-menu-button {
+                display: block;
+            }
+            header .container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 20px 30px;
+            }
+            header img {
+                max-height: 80px;
+                margin-right: 20px;
+                vertical-align: middle;
+            }
+            header .logo {
+                font-size: 2.5rem;
+                font-weight: bold;
+                text-align: center;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div id="mobile-menu">
+            <div id="mobile-menu-content">
+                <button id="mobile-menu-close" class="mobile-menu-close">X</button>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#reservations">Reservations</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <header>
+            <div class="container">
+                <img src="thedancingokralogo.png" alt="Dancing Okra Logo" style="float: left; max-height: 100px; margin-right: 20px; padding: 10px;">
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#reservations">Reservations</a></li>
+                    </ul>
+                </nav>
+                
+            </div>
+        </header>
+        
+    </header>
+    <main class="container">
+        <section id="appetizers">
+            <h2>Appetizers</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img
+src="samosas.png"
+alt="Appetizer 1">
+                    <h3>Cocktail Samosa</h3>
+                    <p>Golden pastry pockets filled with savory blend of spiced potatoes and peas.</p>
+                    <span>$5.99</span>
+                </div>
+                <div class="menu-item">
+                    <img
+src="panipuri.png"
+alt="Appetizer 2">
+                    <h3>Pani Puri</h3>
+                    <p>Crispy puris filled with mashed potatoes, tamarind, chutney and zesty mint coriander.</p>
+                    <span>$7.50</span>
+                </div>
+                <div class="menu-item">
+                    <img
+src="dhokla.png"
+alt="Appetizer 3">
+                    <h3>Rava Dhokla</h3>
+                    <p>Fluffy steamed cakes made with semolina, yogurt, ginger and a hint of tumeric.</p>
+                    <span>$6.00</span>
+                </div>
+                <div class="menu-item">
+                    <img
+src="pakora.png"
+alt="Appetizer 4">
+                    <h3>Pakora</h3>
+                    <p>Golden brown fritters made with a variety of vegetables and deep fried to perfection.</p>
+                    <span>$5.99</span>
+                </div>
+                <div class="menu-item">
+                    <img
+src="pavbhaji.png"
+alt="Appetizer 4">
+                    <h3>Pav Bhaji</h3>
+                    <p>Flavorful medley of mashed vegetables cooked in spices and served in buttered pav buns.</p>
+                    <span>$6.99</span>
+                </div>
+                <div class="menu-item">
+                    <img
+src="chaat.png"
+alt="Appetizer 5">
+                    <h3>Corn Chaat</h3>
+                    <p>Tangy streeet snack made with sweet corn tossed in a blend of chaat masala.</p>
+                    <span>$5.99</span>
+                </div>
+            </div>
+        </section>
+        <section id="entrees">
+            <h2>Entrees</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img
+src="okracurry.png"
+alt="Entree 1">
+                    <h3>Okra Curry Special</h3>
+                    <p>Our signature dish! Tender okra cooked in a rich and aromatic blend of spices..</p>
+                    <span>$30.00</span>
+                </div>
+                <div class="menu-item">
+                    <img
+src="paneertikka.png"
+alt="Entree 2">
+                    <h3>Paneer Tikka Masala</h3>
+                    <p>Mouth watering chargrilled paneer with flavorful spicy gravy.</p>
+                    <span>$18.99</span>
+                </div>
+                <div class="menu-item">
+                    <img
+src="vegbir.png"
+alt="Entree 3">
+                    <h3>Vegetable Biryani</h3>
+                    <p>Fragrant basmati rice cooked with mized vegetables, herbs, and spices.</p>
+                    <span>$19.00</span>
+                </div>
+                <div class="menu-item">
+                    <img
+src="dalsoup.png"
+alt="Entree 4">
+                    <h3>Dal soup</h3>
+                    <p>Soul nourishing soup with lemon juice, rich lentils, and veggies.</p>
+                    <span>$15.99</span>
+                </div>
+                <div class="menu-item">
+                    <img
+src="redlentil.png"
+alt="Entree 5">
+                    <h3>Red Lentil Curry</h3>
+                    <p>Red lentils simmered in a fragrant and spicyy onion tomato curry base.</p>
+                    <span>$22.50</span>
+                </div>
+                <div class="menu-item">
+                    <img
+src="gobimanchu.png"
+alt="Entree 6">
+                    <h3>Gobi Manchurian</h3>
+                    <p>Crispy cauliflower coated in a sweet and tangy sauce.</p>
+                    <span>$20.00</span>
+                </div>
+           
+            <div class="menu-item">
+                <img
+src="chanamasala.png"
+alt="Entree 7">
+                <h3>Chana Masala</h3>
+                <p>Chickpea curry made with heavenly spices.</p>
+                <span>$17.50</span>
+            </div>
+            <div class="menu-item">
+                <img
+src="potatocurry.png"
+alt="Entree 8">
+                <h3>Creamy Potato Curry</h3>
+                <p>Creamy and comforting potato curry made with a coconut based sauce.</p>
+                <span>$19.00</span>
+            </div>
+            <div class="menu-item">
+                <img
+src="eggplantcurry.png"
+alt="Entree 9">
+                <h3>Eggplant Curry</h3>
+                <p>Tender eggplant paired with nutty chickpeas in a creamy sauce.</p>
+                <span>$19.00</span>
+            </div>
+        </section>
+        <section id="desserts">
+            <h2>Desserts</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img
+src="gulab.png"
+alt="Dessert 1">
+                    <h3>Gulab Jamun</h3>
+                    <p>Delicately fried dough drenched in a sugar syrup infused with hints of rose water.</p>
+                    <span>$7.99</span>
+                </div>
+                <div class="menu-item">
+                    <img
+src="kaju.png"
+alt="Dessert 2">
+                    <h3>Kaju Khatli</h3>
+                    <p>Diamond shaped pieces made from finely ground cashews and sugar.</p>
+                    <span>$6.50</span>
+                </div>
+                <div class="menu-item">
+                    <img
+src="rasmalai.png"
+alt="Dessert 3">
+                    <h3>Rasmalai</h3>
+                    <p>Made from fresh paneer immersed in a chilled saffron infused milk.</p>
+                    <span>$7.00</span>
+                </div>
+                <div class="menu-item">
+                    <img
+src="pak.png"
+alt="Dessert 4">
+                    <h3>Mysore Pak</h3>
+                    <p>Traditional sweet made from a rich blend of flour, ghee, and sugar.</p>
+                    <span>$5.00</span>
+                </div>
+                <div class="menu-item">
+                    <img
+src="laddu.png"
+alt="Dessert 4">
+                    <h3>Rava Laddu</h3>
+                    <p>Round treats made from semolina, ghee and sugar.</p>
+                    <span>$6.00</span>
+                </div>
+                <div class="menu-item">
+                    <img
+src="gujiya.png"
+alt="Dessert 5">
+                    <h3>Gujiya</h3>
+                    <p>Golden pastry pocket filled with khoya and nuts and deep fried to perfection.</p>
+                    <span>$6.00</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Restaurant Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
