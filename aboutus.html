@@ -389,7 +389,413 @@
     <script>
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuCloseButton = document.getElementById('mobile-menu-close<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dancing Okra</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            body {
+            font-family: 'Lora', serif;
+            background-color: #FFF4E1;
+            color: #7B5E57;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .container h1 {
+            font-size: 70px;
+        }
+        header, footer, section {
+            margin-top: 0px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+        header {
+            background-color: #243119;
+            color: white;
+            text-align: center;
+            padding: 0px 0;
+            border-bottom: 3px solid #FFCC9C;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+        }
+        header .logo {
+            margin-bottom: 15px;
+        }
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 30px 0;
+            margin: 0;
+        }
+        header nav ul li {
+            margin: 0 20px; 
+        }
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bolder;
+            transition: color 0.3s ease;
+            font-size: 24px;
+        }
+        header nav ul li a:hover {
+            color: #FFE28A; 
+        }
+        section {
+            padding: 40px; 
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0; 
+        }
+        section:last-child {
+            border-bottom: none; 
+        }
+        section h2, section h1 {
+            font-size: 48px; 
+            font-weight: bold;
+            margin-bottom: 25px;
+            color: #243119; 
+        }
+        section p {
+            font-size: 1.15rem; 
+            line-height: 1.8; 
+            margin-bottom: 30px;
+            color: #7B5E57; 
+            max-width: 800px; 
+            margin-left: auto;
+            margin-right: auto;
+        }
+        img {
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+            justify-self: center;
+        }
+        .story-section {
+        max-width: 1500px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        align-items: center;
+        align-self: center;
+        }
+
+        .story-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 60px;
+            gap: 50px;
+        }
+
+        .story-container.right-image {
+            flex-direction: row-reverse;
+        }
+
+        .story-image {
+        width: 20%;
+        height: auto;
+        border-radius: 10px;
+        object-fit: cover;
+        display: flex;
+        float: right;
+        }
+
+        .story-text {
+        width: 50%;
+        margin-left: 5%;
+        }
+
+        .story-text h2 {
+        font-size: 32px;
+        color: #2e2e2e;
+        margin-bottom: 15px;
+        }
+
+        .story-text p {
+        font-size: 20px;
+        color: #555;
+        line-height: 1.7;
+        }
+        .mobile-menu-button {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.3rem;
+            cursor: pointer;
+            padding: 12px 20px;
+            font-weight: bold;
+        }
+        #mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 10;
+            align-items: center;
+            justify-content: center;
+        }
+        #mobile-menu-content {
+            background-color: #243119;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        #mobile-menu-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: #FFF4E1;
+            font-size: 1.75rem; 
+            cursor: pointer;
+            opacity: 0.8;
+            transition: opacity 0.2s ease-in-out;
+        }
+        #mobile-menu-close:hover {
+            opacity: 1;
+        }
+        #mobile-menu-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #mobile-menu-content ul li {
+            margin-bottom: 25px; 
+        }
+        #mobile-menu-content ul li a {
+            color: #FFF4E1; 
+            text-decoration: none;
+            font-size: 1.3rem; 
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        #mobile-menu-content ul li a:hover {
+            color: #FFE28A; 
+        }
+
+        #view-menu-button {
+            background-color: #F5B971; 
+            color: white;
+            border: none;
+            border-radius: 10px; 
+            padding: 14px 30px; 
+            font-size: 1.15rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+            text-decoration: none;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+            margin-top: 30px; 
+            display: inline-block; 
+            width: auto;      
+            min-width: 200px; 
+        }
+        #view-menu-button:hover {
+            background-color: #e0a55d; 
+            transform: scale(1.05);
+        }
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            background-color: #7B5E57;
+            color: #FFF4E1;
+            font-size: 1rem;
+        }
+        footer p {
+            color: #FFE28A;
+            margin: 8px 0;
+        }
+
+        @media (max-width: 1000px) {
+            header nav {
+                display: none;
+            }
+            .mobile-menu-button {
+                display: block;
+            }
+            header .container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 20px 30px;
+            }
+            header img {
+                max-height: 80px;
+                margin-right: 20px;
+                vertical-align: middle;
+            }
+            header .logo {
+                font-size: 2.5rem;
+                font-weight: bold;
+                text-align: center;
+            }
+            section {
+                padding: 30px 0;
+            }
+            section h2 {
+                font-size: 2.4rem;
+                margin-bottom: 20px;
+            }
+            section p {
+                font-size: 1.1rem;
+                margin-bottom: 25px;
+                padding: 0 15px;
+            }
+            footer {
+                padding: 20px 0;
+                font-size: 0.9rem;
+            }
+        }
+        </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="thedancingokralogo.png" alt="Dancing Okra Logo" style="float: left; max-height: 100px; margin-right: 20px; padding: 10px;">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+            </nav>
+            <button id="mobile-menu-button" class="mobile-menu-button">Menu</button>
+        </div>
+    </header>
+
+    <div id="mobile-menu">
+        <div id="mobile-menu-content">
+            <button id="mobile-menu-close" class="mobile-menu-close">X</button>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </div>
+    </div>
+    <main>
+        <section class="story-section">
+            <h2>About Us</h2>
+            <br>
+            <div class="story-container">
+              <img src="ceilingplantsview.jpg" alt="Live music stage" class="story-image">
+              <div class="story-text">
+                <h2>Our Beginning</h2>
+                <p>
+                The Dancing Okra started the way a lot of good things do — around a family table. 
+                We grew up with food at the heart of everything. 
+                It was never just about what was on our plates. 
+                It was about who we were sharing it with, the stories that got louder as the night went on, and the music that always seemed to be playing somewhere in the background. 
+                We missed that feeling. 
+                We wanted to build a place that brought it all together again. 
+                A place that felt warm and real, where good food and good music made you feel right at home from the minute you walked in.
+                </p>
+              </div>
+            </div>
+          
+            <div class="story-container right-image">
+              <img src="garden.jpg" alt="Farm grown vegetables" class="story-image">
+              <div class="story-text">
+                <h2>Rooted in Freshness</h2>
+                <p>
+                A lot of the vegetables we use here are grown by us. 
+                Right here. 
+                It is something we are proud of. 
+                We believe food tastes different when you know where it came from and you had a hand in growing it. 
+                It feels different too. When you eat with us, you are not just eating something fresh. 
+                You are eating something we put time into. 
+                Something we watched grow and cared for. 
+                It is simple but it means everything to us.
+                </p>
+              </div>
+            </div>
+          
+            <div class="story-container">
+              <img src="livemusic.jpg" alt="Okra Curry Special" class="story-image" style="float: right;">
+              <div class="story-text">
+                <h2>Music that Moves You</h2>
+                <p>Music has always been part of our story. 
+                At family gatherings, there was always a song playing somewhere. 
+                That is why we have live music at The Dancing Okra. 
+                Sometimes it is soft and slow. 
+                Sometimes it is full of energy and makes you want to move. 
+                Either way, it brings the room to life. 
+                We want you to feel like you are not just eating a meal but stepping into a moment. 
+                Something a little louder, a little brighter, and a lot more full of heart.
+                </p>
+              </div>
+            </div>
+
+            <div class="story-container right-image">
+                <img src="okracurry.png" alt="Okra Curry Special" class="story-image" style="float: right;">
+                <div class="story-text">
+                  <h2>Our Signature Dish</h2>
+                  <p>There was never any doubt about what dish had to be at the center of our menu. 
+                    It had to be Grandma’s okra curry. 
+                    She made it all the time when we were growing up and somehow it always tasted like love. 
+                    It was the dish everyone waited for. 
+                    It brought people home. When we opened the restaurant, we knew we wanted to share that same feeling. 
+                    Our Okra Curry Special is a small way to keep her with us and to pass that warmth on to you.
+                  </p>
+                </div>
+              </div>
+
+            <div class="story-container">
+                <img src="outsideview.jpg" alt="Okra Curry Special" class="story-image">
+                <div class="story-text">
+                    <h2>More Than a Meal</h2>
+                    <p>
+                        The Dancing Okra is not just a restaurant. 
+                        It is a piece of who we are. 
+                        It is food made with real care, music that fills the room, and moments that feel like they matter. 
+                        We are here to offer more than just dinner. 
+                        We are here to give you a place to slow down, to laugh, to listen, and to feel at home. 
+                        We are so happy you are here and we cannot wait to share it all with you.
+                    </p>
+                </div>
+            </div>
+          </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 The Dancing Okra. All rights reserved.</p>
+    </footer>
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
         const mobileMenuCloseButton = document.getElementById('mobile-menu-close');
+       
+        if (mobileMenuButton && mobileMenu && mobileMenuCloseButton) {
+        mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.style.display = 'flex'; 
+        });
+       
+        mobileMenuCloseButton.addEventListener('click', () => {
+        mobileMenu.style.display = 'none';
+        });
+        }
+        </script>
+</body>
+</html>
        
         if (mobileMenuButton && mobileMenu && mobileMenuCloseButton) {
         mobileMenuButton.addEventListener('click', () => {
