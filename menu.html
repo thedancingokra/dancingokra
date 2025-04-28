@@ -18,17 +18,21 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
+
         .container h1 {
             font-size: 70px;
         }
+
         header, footer, section {
             margin-top: 0px;
         }
+
         .container {
             max-width: 1100px;
             margin: 0 auto;
             padding: 0 30px;
         }
+
         header {
             background-color: #243119;
             color: white;
@@ -40,6 +44,7 @@
             align-items: center; 
             justify-content: space-between; 
         }
+
         header .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -48,9 +53,11 @@
             align-items: center;
             justify-content: center;
         }
+
         header .logo {
             margin-bottom: 15px;
         }
+
         header nav ul {
             list-style: none;
             display: flex;
@@ -58,9 +65,11 @@
             padding: 30px 0;
             margin: 0;
         }
+
         header nav ul li {
             margin: 0 20px; 
         }
+
         header nav ul li a {
             text-decoration: none;
             color: white;
@@ -68,23 +77,28 @@
             transition: color 0.3s ease;
             font-size: 24px;
         }
+
         header nav ul li a:hover {
             color: #FFE28A; 
         }
+
         section {
             padding: 40px; 
             text-align: center;
             border-bottom: 1px solid #e0e0e0; 
         }
+
         section:last-child {
             border-bottom: none; 
         }
+
         section h2, section h1 {
             font-size: 48px; 
             font-weight: bold;
             margin-bottom: 25px;
             color: #243119; 
         }
+
         section p {
             font-size: 1.15rem; 
             line-height: 1.8; 
@@ -94,6 +108,7 @@
             margin-left: auto;
             margin-right: auto;
         }
+
         img {
             align-content: center;
             align-items: center;
@@ -101,6 +116,8 @@
             justify-items: center;
             justify-self: center;
         }
+
+        /*Menu Styles*/
         .menu-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -114,12 +131,12 @@
             }
         }
 
+
         @media (min-width: 992px) {
             .menu-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
         }
-
 
         .menu-item {
             background-color: white;
@@ -171,6 +188,7 @@
             margin-top: 20px;
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
         }
+
         .menu-item button:hover {
             background-color: #e0a55d;
             transform: scale(1.05);
@@ -199,6 +217,7 @@
             padding: 12px 20px;
             font-weight: bold;
         }
+
         #mobile-menu {
             display: none;
             position: fixed;
@@ -211,6 +230,7 @@
             align-items: center;
             justify-content: center;
         }
+
         #mobile-menu-content {
             background-color: #243119;
             padding: 40px;
@@ -219,6 +239,7 @@
             position: relative;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
+
         #mobile-menu-close {
             position: absolute;
             top: 15px;
@@ -231,17 +252,21 @@
             opacity: 0.8;
             transition: opacity 0.2s ease-in-out;
         }
+
         #mobile-menu-close:hover {
             opacity: 1;
         }
+
         #mobile-menu-content ul {
             list-style: none;
             padding: 0;
             margin: 0;
         }
+
         #mobile-menu-content ul li {
             margin-bottom: 25px; 
         }
+
         #mobile-menu-content ul li a {
             color: #FFF4E1; 
             text-decoration: none;
@@ -249,6 +274,7 @@
             font-weight: bold;
             transition: color 0.3s ease;
         }
+
         #mobile-menu-content ul li a:hover {
             color: #FFE28A; 
         }
@@ -269,74 +295,93 @@
             width: auto;      
             min-width: 200px; 
         }
+
         #view-menu-button:hover {
             background-color: #e0a55d; 
             transform: scale(1.05);
         }
+
+
+        /*Responsive Styles*/
         @media (max-width: 1000px) {
             header nav {
                 display: none;
             }
+
             .mobile-menu-button {
                 display: block;
             }
+
             header .container {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 padding: 20px 30px;
             }
+
             header .container > img {
                 max-height: 80px;
                 margin-right: 20px;
                 vertical-align: middle;
             }
+
             header img {
                 max-height: 80px;
                 margin-right: 20px;
                 vertical-align: middle;
             }
+
             header .logo {
                 font-size: 2.5rem;
                 font-weight: bold;
                 text-align: center;
             }
+
             section {
                 padding: 30px 0;
             }
+
             section h2 {
                 font-size: 2.4rem;
                 margin-bottom: 20px;
             }
+
             section p {
                 font-size: 1.1rem;
                 margin-bottom: 25px;
                 padding: 0 15px;
             }
+
             .grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
                 padding: 0 15px;
             }
+
             .grid-item {
                 padding: 25px;
             }
+
             .grid-item h3 {
                 font-size: 1.5rem;
                 margin-bottom: 15px;
             }
+
             .grid-item p {
                 font-size: 1rem;
                 margin-bottom: 1rem;
             }
+
             .grid-item button {
                 font-size: 1.05rem;
                 padding: 12px 25px;
             }
+
             footer {
                 padding: 20px 0;
                 font-size: 0.9rem;
             }
+
             #reservations .container {
                 padding: 30px;
             }
@@ -459,7 +504,7 @@
                         <button>Order Now</button>
                     </div>
                     <div class="menu-item">
-                        <img src="gobimanchu.png" alt="Entree 6">
+                        <img src="gobimanchurian.jpg" alt="Entree 6">
                         <h3>Gobi Manchurian</h3>
                         <p>Crispy cauliflower coated in a sweet and tangy sauce.</p>
                         <p>$20.00</p>
@@ -553,7 +598,6 @@
         mobileMenuCloseButton.addEventListener('click', () => {
         mobileMenu.style.display = 'none';
         });
-        }
         </script>
 </body>
 </html>
